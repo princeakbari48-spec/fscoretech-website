@@ -1,50 +1,39 @@
-# FS Core Tech website
+# FS Core Tech
 
-Static deployment package for **fscoretech.com**.
+Official website repository for **FS Core Tech**.
 
-## Pages
-- `index.html` — Home
-- `projects.html` — FS Calling Line / Projects
-- `about.html` — About
-- `contact.html` — Contact
-- `privacy.html` — Privacy Policy
-- `terms.html` — Terms
+🌐 Website: https://fscoretech.com  
+📧 Contact: CallLine@fscoretech.com
 
-## Replace the GitHub placeholder
-Edit only:
+## FS Calling Line
 
-`assets/js/config.js`
+**FS Calling Line** is a cross-platform communication application currently under development.
 
-Change:
+Development targets include:
 
-```js
-githubUrl: "https://github.com/YOUR-USERNAME/fscoretech"
-```
+- Android
+- Windows
+- iOS
+- Cloud-connected voice / VoIP
+- Call history and analytics
+- Live transcription
 
-to your real public repository URL.
+The project focuses on creating a unified calling and communication experience across mobile and desktop platforms.
 
-## Local preview
-From this folder run:
+## Development Status
 
-```bash
-python -m http.server 8080
-```
+FS Calling Line is currently under active development. Features and platform support described in this repository or on the website may change during development.
 
-Then open `http://localhost:8080`.
+## Website
 
-## Cloudflare Pages (simple deployment)
-1. Put these files in the root of a GitHub repository.
-2. In Cloudflare, open **Workers & Pages → Create application → Pages → Connect to Git**.
-3. Choose the repository.
-4. Framework preset: **None**.
-5. Build command: leave blank.
-6. Build output directory: `/` (repository root) if Cloudflare accepts it; otherwise use a project with these files in the selected output root.
-7. Deploy.
-8. In the Pages project, open **Custom domains → Set up a custom domain** and add `fscoretech.com`.
+This repository contains the source files for the official FS Core Tech website:
 
-You can also use Cloudflare Pages direct upload because this site has no build step.
+https://fscoretech.com
 
-## Notes
-- No analytics or trackers are included by default.
-- Contact uses `mailto:` and does not require a server.
-- `_headers` adds lightweight security headers when supported by the host.
+## Contact
+
+For project-related inquiries:
+
+**CallLine@fscoretech.com**
+
+© 2026 FS Core Tech
