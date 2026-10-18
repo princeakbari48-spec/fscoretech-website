@@ -823,3 +823,21 @@ textarea {
 @media(max-width:680px){
  .app-grid-four .app-tile-premium .app-art{height:165px; min-height:165px; max-height:165px; padding:14px;}
 }
+
+
+/* Detailed application feature pages */
+.feature-intro{margin:12px 0 32px;max-width:780px}
+.feature-intro h2{font-size:clamp(27px,3vw,40px);margin-top:8px}
+.feature-intro p{font-size:16px;line-height:1.75}
+.feature-section{margin:0 0 48px}
+.feature-section-heading{margin-bottom:18px}
+.feature-section-heading h2{font-size:clamp(23px,2.4vw,32px);margin-top:7px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.feature-card{background:linear-gradient(145deg,#13223a,#0b131f);border:1px solid #2d4160;border-radius:15px;padding:25px;min-width:0;box-shadow:inset 0 1px #d6e8ff08}
+.feature-mark{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;color:#9bceff;background:#24466d55;margin-bottom:17px}
+.feature-card h3{font-size:21px;line-height:1.25;margin:0 0 12px;overflow-wrap:anywhere}
+.feature-card p{font-size:15px;color:#b5c5d9;line-height:1.7;margin:0}
+.product-panel .product-app-art{width:100%;max-width:100%;height:210px;object-fit:contain;object-position:center;margin:22px auto}
+.product-panel .product-app-art.muslim-route-icon{width:100%;height:210px;margin:22px auto}
+@media(max-width:900px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.feature-grid{grid-template-columns:1fr}.feature-card{padding:22px}.feature-section{margin-bottom:34px}.product-panel .product-app-art{height:170px}.product-panel .product-app-art.muslim-route-icon{height:170px}}
