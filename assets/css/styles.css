@@ -802,3 +802,24 @@ textarea {
  .app-grid-four .app-tile-premium .app-art img {max-height:130px !important;}
  .app-grid-four .app-tile-premium .app-description {min-height:0;}
 }
+
+
+/* Final matched-size original-logo presentation; preserve source aspect ratios. */
+.app-grid-four .app-tile-premium .app-art{
+ box-sizing:border-box; width:100%; height:200px; min-height:200px; max-height:200px;
+ margin:20px 0; padding:22px; display:flex; align-items:center; justify-content:center;
+ overflow:hidden; border-radius:16px;
+}
+.app-grid-four .app-tile-premium .app-art img,
+.app-grid-four .app-tile-premium .app-art img.muslim-route-icon{
+ display:block; width:100% !important; height:100% !important;
+ max-width:100% !important; max-height:100% !important;
+ object-fit:contain; object-position:center; margin:0 auto;
+}
+.app-grid-four .app-tile-premium .app-description{
+ flex-grow:1; min-height:0; max-width:60ch; line-height:1.7;
+}
+.app-grid-four .app-tile-premium .app-link{margin-top:auto;}
+@media(max-width:680px){
+ .app-grid-four .app-tile-premium .app-art{height:165px; min-height:165px; max-height:165px; padding:14px;}
+}
