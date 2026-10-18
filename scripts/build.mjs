@@ -16,6 +16,9 @@ for (const asset of [
   "assets/js/main.js",
   "assets/icons/favicon.svg",
   "assets/images/fscoretech-emblem.png",
+  "assets/images/fsp-calling-line.png",
+  "assets/images/fsp-media-player.png",
+  "assets/images/fsp-download-manager.png",
 ]) {
   await mkdir(resolve("dist", asset, ".."), { recursive: true });
   await copyFile(asset, `dist/${asset}`);

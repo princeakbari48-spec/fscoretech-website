@@ -615,3 +615,31 @@ textarea {
     transition: none !important;
   }
 }
+
+/* Official application artwork: retain each asset's natural proportions. */
+.app-art {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 24px 0;
+}
+.app-art img {
+  width: 100%;
+  max-width: 280px;
+  max-height: 150px;
+  object-fit: contain;
+  object-position: left center;
+}
+.product-app-art {
+  width: 100%;
+  max-width: 320px;
+  height: 200px;
+  object-fit: contain;
+  margin: 22px 0;
+}
+@media (max-width: 650px) {
+  .product-app-art {
+    height: 180px;
+  }
+}
