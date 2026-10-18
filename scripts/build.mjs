@@ -16,6 +16,7 @@ for (const asset of [
   "assets/js/main.js",
   "assets/icons/favicon.svg",
   "assets/images/fscoretech-emblem.png",
+  "assets/images/muslim-route.png",
   "assets/images/fsp-calling-line.png",
   "assets/images/fsp-media-player.png",
   "assets/images/fsp-download-manager.png",

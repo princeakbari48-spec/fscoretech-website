@@ -1,6 +1,6 @@
 # FSCoreTech website
 
-Public application catalog at https://fscoretech.com. FSP Calling Line, FSP Media Player, and FSP Download Manager are completed applications, as confirmed by the owner. No version, platform compatibility, feature list, or installer is assumed.
+Public application catalog at https://fscoretech.com. FSP Calling Line, FSP Media Player, FSP Download Manager, and Muslim Route are completed applications, as confirmed by the owner. No version, platform compatibility, feature list, or installer is assumed.
 
 The black, electric blue, and silver design uses the owner's original transparent globe emblem. Existing HTML URLs, legal pages, sitemap, robots directives, and external service configuration are retained. Legal copy was updated for the confirmed status and contact address.
 
@@ -34,3 +34,5 @@ Required environment settings (configure Preview and Production separately):
 An entry has the structure `"approved-id": {"key": "actual-private-object-key", "filename": "actual-installer-filename"}`. These are placeholders, not published releases. Configure only verified builds. Every user allowed into this Access application can access every manifest entry; use separate applications/audiences for separate entitlements.
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for staged merge and deployment instructions. This change does not provision Access, R2, mail, or DNS and does not deploy production.
+
+Official application artwork is included for all four completed applications. Muslim Route details are limited to the owner-confirmed name and completion status.
