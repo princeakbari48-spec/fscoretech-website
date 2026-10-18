@@ -1,0 +1,17 @@
+{
+  "name": "fscoretech-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "dev": "wrangler pages dev dist",
+    "preview:deploy": "npm run build && wrangler pages deploy dist --project-name=fscoretech-website --branch=feature/fsp-multi-app-catalog"
+  },
+  "dependencies": {
+    "jose": "^6.1.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

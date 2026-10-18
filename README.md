@@ -1,60 +1,36 @@
-# FS Core Tech
+# FSCoreTech website
 
-Official website and public development presence for **FS Core Tech**, an independent software development project focused on practical communication tools.
+Public application catalog at https://fscoretech.com. FSP Calling Line, FSP Media Player, and FSP Download Manager are completed applications, as confirmed by the owner. No version, platform compatibility, feature list, or installer is assumed.
 
-🌐 Website: https://fscoretech.com  
-📧 Contact: CallLine@fscoretech.com
+The black, electric blue, and silver design uses the owner's original transparent globe emblem. Existing HTML URLs, legal pages, sitemap, robots directives, and external service configuration are retained. Legal copy was updated for the confirmed status and contact address.
 
-## FS Calling Line
+Contact: **fsp@fscoretech.com**, **+13466588850**. Mailbox provisioning is separate; no mailbox or DNS records are created by this source change.
 
-**FS Calling Line** is the primary software project currently being developed by FS Core Tech.
+## Local checks
 
-It is being designed as a cross-platform communication application with development targeting:
+Requires Node.js 22 or newer and npm.
 
-- Android
-- Windows
-- iOS
-- Calling and communication workflows
-- Call history and analytics
-- Live transcription
-- Cloud-connected voice / VoIP integration
+```sh
+npm ci
+npm test
+npm run build
+npx wrangler pages functions build functions --outdir .wrangler/compiled
+npm run dev
+```
 
-The goal is to provide a consistent calling and communication experience across mobile and desktop platforms.
+Open the local URL printed by Wrangler. `dist` contains only allowlisted public files. Never deploy the repository root. Keep `functions/` alongside the working directory when deploying with Wrangler; dashboard drag-and-drop does not bundle these Functions.
 
-## Development Status
+## Private installers
 
-FS Calling Line is currently under active development.
+No installers or public installer URLs are committed. Public calls to action lead to Contact until an approved download service is configured. The `/downloads/<id>` Function validates signed Cloudflare Access JWTs, issuer, audience, expiration, issued-at, and subject before reading a private R2 object. It rejects missing configuration, unknown identifiers, unapproved HTTP methods, and invalid identities. File bytes stream from R2 without redirecting to an origin URL, with `private, no-store` headers. This also applies on Pages preview aliases.
 
-Features, integrations, screenshots, interfaces, and platform support described on the FS Core Tech website represent current development work or planned product direction unless specifically identified as released functionality.
+Required environment settings (configure Preview and Production separately):
 
-## About This Repository
+- `ACCESS_TEAM_DOMAIN`: your exact `https://<team>.cloudflareaccess.com` issuer, without trailing slash.
+- `ACCESS_AUD`: audience of the specific Access application with an explicit allow policy.
+- `PRIVATE_INSTALLERS`: binding to a private R2 bucket. Disable its r2.dev endpoint and public custom domains; inspect existing bucket access before uploading anything.
+- `INSTALLER_MANIFEST`: JSON object mapping approved URL identifiers to actual R2 object keys and safe attachment filenames. Default `{}` exposes nothing. Use verified build metadata, not guessed versions or filenames.
 
-This repository contains the source code for the official **FS Core Tech website**.
+An entry has the structure `"approved-id": {"key": "actual-private-object-key", "filename": "actual-installer-filename"}`. These are placeholders, not published releases. Configure only verified builds. Every user allowed into this Access application can access every manifest entry; use separate applications/audiences for separate entitlements.
 
-The website provides public information about:
-
-- FS Core Tech
-- FS Calling Line
-- Current development direction
-- Project status
-- Contact information
-
-Official website:
-
-https://fscoretech.com
-
-## Developer
-
-GitHub profile:
-
-https://github.com/princeakbari48-spec
-
-## Contact
-
-For development and project-related inquiries:
-
-**CallLine@fscoretech.com**
-
----
-
-© 2026 FS Core Tech
+See [DEPLOYMENT.md](DEPLOYMENT.md) for staged merge and deployment instructions. This change does not provision Access, R2, mail, or DNS and does not deploy production.
