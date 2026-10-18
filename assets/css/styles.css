@@ -662,3 +662,65 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Catalog layout hardening: constrain large official source artwork. */
+.app-grid-four {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+.app-grid-four > .app-tile {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  padding: clamp(20px, 2.5vw, 30px);
+}
+.app-grid-four .tile-top { flex-wrap: wrap; }
+.app-grid-four .app-art {
+  width: 100%;
+  height: 180px;
+  min-height: 180px;
+  max-height: 180px;
+  margin: 20px 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: radial-gradient(circle at center,rgba(44,121,207,.14),transparent 70%);
+}
+.app-grid-four .app-art img,
+.app-grid-four .app-art img.muslim-route-icon {
+  display: block;
+  width: auto !important;
+  height: auto !important;
+  max-width: min(100%, 290px) !important;
+  max-height: 148px !important;
+  min-width: 0;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+}
+.app-grid-four .app-art img.muslim-route-icon {
+  max-width: 115px !important;
+  max-height: 115px !important;
+}
+.app-grid-four .app-tile h3 {
+  min-height: 0;
+  margin-top: 12px;
+  font-size: clamp(21px, 2.1vw, 27px);
+  overflow-wrap: break-word;
+}
+.app-grid-four .app-tile p { margin: 12px 0 22px; }
+.app-grid-four .app-link { margin-top: auto; }
+.brand { min-width: 0; }
+.brand span { display: block; }
+@media (max-width: 680px) {
+  .app-grid-four { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .app-grid-four .app-art { height: 160px; min-height: 160px; max-height: 160px; }
+  .app-grid-four .app-art img { max-height: 130px !important; }
+  .brand { font-size: 17px; }
+  .brand img { width: 48px; height: 44px; }
+}
