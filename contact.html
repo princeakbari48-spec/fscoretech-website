@@ -89,8 +89,10 @@
             </div>
             <div class="request-honeypot" aria-hidden="true"><label for="request-website">Leave this field empty</label><input id="request-website" name="website" tabindex="-1" autocomplete="off" /></div>
             <p class="request-privacy">Your information is used to respond to this enquiry. Do not include passwords or payment card numbers. See our <a href="privacy.html">Privacy Policy</a>.</p>
-            <button type="submit" class="btn primary" id="request-submit">Send request →</button>
-            <p id="request-status" role="status" aria-live="polite"></p>
+            <div id="turnstile-widget" class="turnstile-widget" aria-label="Security verification"></div>
+            <button type="submit" class="btn primary" id="request-submit" disabled>Complete security check to continue</button>
+            <p id="request-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+            <noscript><p class="notice">To send a request, email <a href="mailto:contact@fscoretech.com">contact@fscoretech.com</a>. Include the application name and your request details.</p></noscript>
           </form>
         </div>
       </section>
