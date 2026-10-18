@@ -6,13 +6,13 @@
     <title>Contact — FSCoreTech</title>
     <meta
       name="description"
-      content="Contact FSCoreTech at fsp@fscoretech.com or +13466588850."
+      content="Contact FSCoreTech at contact@fscoretech.com or +13466588850."
     />
     <meta name="theme-color" content="#06090f" />
     <meta property="og:title" content="Contact — FSCoreTech" />
     <meta
       property="og:description"
-      content="Contact FSCoreTech at fsp@fscoretech.com or +13466588850."
+      content="Contact FSCoreTech at contact@fscoretech.com or +13466588850."
     />
     <meta property="og:url" content="https://fscoretech.com/contact.html" />
     <meta property="og:type" content="website" />
@@ -21,9 +21,9 @@
       href="assets/images/fscoretech-emblem.png"
       type="image/png"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20261018-direct-contact" />
     <script defer src="assets/js/config.js"></script>
-    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/main.js?v=20261018-request"></script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -62,34 +62,36 @@
           <span class="eyebrow">DIRECT CONTACT</span>
           <h2>Start a conversation.</h2>
           <p>Email</p>
-          <a class="contact-link" href="mailto:fsp@fscoretech.com" data-email
-            >fsp@fscoretech.com</a
+          <a class="contact-link" href="mailto:contact@fscoretech.com" data-email
+            >contact@fscoretech.com</a
           >
           <p>Phone</p>
           <a class="contact-link" href="tel:+13466588850">+13466588850</a>
           <p class="notice">
-            Mailbox setup is separate from this website. The fsp@fscoretech.com
-            mailbox requires provisioning before email delivery can be
-            confirmed.
+            Use the form to request an application or contact our team. We review each request individually.
           </p>
         </aside>
-        <div class="card">
-          <h2>Compose an email</h2>
-          <p>
-            This opens your email app. Messages are not submitted or stored by
-            this website.
-          </p>
-          <div class="field">
-            <label for="subject">Subject</label
-            ><input id="subject" value="FSCoreTech inquiry" maxlength="200" />
-          </div>
-          <div class="field">
-            <label for="message">Message</label
-            ><textarea id="message" placeholder="How can we help?"></textarea>
-          </div>
-          <button type="button" class="btn primary" id="compose">
-            Open email app ↗
-          </button>
+        <div class="card request-card" id="access-request">
+          <span class="eyebrow">APPLICATION ACCESS &amp; ENQUIRIES</span>
+          <h2>Send a request to FSCoreTech</h2>
+          <p>Submit your details securely. We will review your request and contact you at the email address provided. Application access is subject to approval.</p>
+          <form id="app-request-form" method="post" action="/api/app-request">
+            <div class="request-fields">
+              <div class="field"><label for="request-name">Full name *</label><input id="request-name" name="name" autocomplete="name" maxlength="120" required /></div>
+              <div class="field"><label for="request-email">Email address *</label><input id="request-email" name="email" type="email" autocomplete="email" maxlength="254" required /></div>
+              <div class="field"><label for="request-phone">Contact number *</label><input id="request-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" required /></div>
+              <div class="field"><label for="request-address">Address *</label><input id="request-address" name="address" autocomplete="street-address" maxlength="280" required /></div>
+              <div class="field request-span"><label for="request-app">Application *</label><select id="request-app" name="application" required>
+                <option value="">Select application</option>
+                <option>FSP Calling Line</option><option>FSP Media Player</option><option>FSP Download Manager</option><option>Muslim Route</option><option>General enquiry</option>
+              </select></div>
+              <div class="field request-span"><label for="request-details">Detailed request *</label><textarea id="request-details" name="details" rows="7" maxlength="5000" minlength="15" placeholder="Tell us which app you need, your intended use, your device/platform and any questions..." required></textarea></div>
+            </div>
+            <div class="request-honeypot" aria-hidden="true"><label for="request-website">Leave this field empty</label><input id="request-website" name="website" tabindex="-1" autocomplete="off" /></div>
+            <p class="request-privacy">Your information is used to respond to this enquiry. Do not include passwords or payment card numbers. See our <a href="privacy.html">Privacy Policy</a>.</p>
+            <button type="submit" class="btn primary" id="request-submit">Send request →</button>
+            <p id="request-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>
