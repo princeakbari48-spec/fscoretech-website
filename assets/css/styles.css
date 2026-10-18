@@ -841,3 +841,11 @@ textarea {
 .product-panel .product-app-art.muslim-route-icon{width:100%;height:210px;margin:22px auto}
 @media(max-width:900px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.feature-grid{grid-template-columns:1fr}.feature-card{padding:22px}.feature-section{margin-bottom:34px}.product-panel .product-app-art{height:170px}.product-panel .product-app-art.muslim-route-icon{height:170px}}
+
+
+/* Detailed application capability bullet lists */
+.feature-bullets{margin:18px 0 0;padding:16px 0 0 20px;border-top:1px solid #2a3c55;list-style:disc}
+.feature-bullets li{color:#d4e2f2;font-size:14px;line-height:1.6;padding-left:4px;margin:0 0 9px}
+.feature-bullets li::marker{color:#68aefe}
+.feature-card{display:flex;flex-direction:column}
+.feature-card .feature-bullets{margin-top:auto}
