@@ -724,3 +724,10 @@ textarea {
   .brand { font-size: 17px; }
   .brand img { width: 48px; height: 44px; }
 }
+
+/* Corporate homepage: compact artwork with balanced negative space. */
+.hero-art-compact{display:flex;align-items:center;justify-content:center;max-width:390px;width:100%;margin-inline:auto;padding:12px 20px;}
+.hero-art-compact img{width:100%;height:auto;max-width:330px;max-height:340px;object-fit:contain;}
+.hero-art-compact .orbit{inset:14%;}
+@media(max-width:900px){.hero-art-compact{max-width:300px}.hero-art-compact img{max-width:250px;}}
+@media(max-width:650px){.hero-art-compact{max-width:235px}.hero-art-compact img{max-width:200px;}}
