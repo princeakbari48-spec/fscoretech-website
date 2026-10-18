@@ -849,3 +849,21 @@ textarea {
 .feature-bullets li::marker{color:#68aefe}
 .feature-card{display:flex;flex-direction:column}
 .feature-card .feature-bullets{margin-top:auto}
+
+
+/* App access requests */
+.request-card{min-width:0}
+.request-card h2{font-size:clamp(25px,2.7vw,36px);margin-top:9px}
+.request-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.request-fields .field{min-width:0}
+.request-fields label{font-weight:650;font-size:14px;display:block;margin-bottom:7px}
+.request-fields input,.request-fields textarea,.request-fields select{display:block;width:100%;min-width:0;padding:12px 13px;border:1px solid #38516c;border-radius:8px;background:#0a1422;color:#eef5ff;font:inherit}
+.request-fields input:focus,.request-fields textarea:focus,.request-fields select:focus{outline:2px solid #6ba8ff;outline-offset:1px}
+.request-fields textarea{resize:vertical}
+.request-span{grid-column:1/-1}
+.request-honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.request-privacy{font-size:13px;color:#bac8d9;line-height:1.6}
+.request-privacy a{text-decoration:underline;color:#9bc9ff}
+#request-status{font-size:14px;min-height:1.7em;color:#dce8f7}
+#request-submit:disabled{opacity:.65;cursor:wait}
+@media(max-width:680px){.request-fields{grid-template-columns:1fr}}
